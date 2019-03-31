@@ -31,6 +31,9 @@ app.get('/', (req, res) => {
     res.json({"message" : "It's the beginning of a note taking application"})
 });
 
+// reuqire notes routes
+require('./app/routes/note.routes.js')(app);
+
 // define a listening port
 app.listen(PORT, () => {
     console.log("The server is listening on the port " + PORT)
